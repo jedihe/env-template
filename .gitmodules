@@ -1,3 +1,3 @@
 [submodule "docker-env"]
 	path = docker-env
-	url = git@github.com:jedihe/env-template.git
+	url = git@github.com:jedihe/docker-apache-php.git
