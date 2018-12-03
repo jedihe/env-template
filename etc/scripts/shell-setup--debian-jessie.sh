@@ -80,7 +80,7 @@ easy_install pip
 apt-get install -y unzip patch
 
 # Enable aliases for Coding Standards tooling.
-#echo "source /mnt/etc/scripts/.bashrc" >> /home/$USERNAME/.zshrc
+echo "source /mnt/etc/bashrc" >> /home/$USERNAME/.zshrc
 
 runuser -l $USERNAME -c "composer global require drupal/coder"
 runuser -l $USERNAME -c "/home/$USERNAME/.composer/vendor/bin/phpcs --config-set installed_paths /home/$USERNAME/.composer/vendor/drupal/coder/coder_sniffer"

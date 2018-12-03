@@ -1,0 +1,6 @@
+# Allow executing helper scripts easily
+set PATH=$PATH:/mnt/etc/scripts
+alias ll='ls -al'
+
+alias drupalcs="phpcs --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,js,css,info,txt'"
+alias drupalbp="phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,js,css,info,txt,md"
