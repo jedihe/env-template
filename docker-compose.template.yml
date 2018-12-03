@@ -17,6 +17,7 @@ services:
       - HOST_UID=1000
     volumes:
 #     - ../envshare/:/envshare/
+      - ./etc/:/mnt/etc/
       - ./site/:/var/www/html/
 #     - /home/docker/.ssh/:/var/www/.ssh/
     links:
