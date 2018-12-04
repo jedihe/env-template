@@ -85,5 +85,7 @@ echo "source /mnt/etc/bashrc" >> /home/$USERNAME/.zshrc
 runuser -l $USERNAME -c "composer global require drupal/coder"
 runuser -l $USERNAME -c "/home/$USERNAME/.composer/vendor/bin/phpcs --config-set installed_paths /home/$USERNAME/.composer/vendor/drupal/coder/coder_sniffer"
 
-cp /root/.ssh/id_rsa /home/$USERNAME/.ssh
-chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh
+mkdir -p /home/$USERNAME/.ssh
+chmod 700 /home/$USERNAME/.ssh
+cp /root/.ssh/id_rsa /home/$USERNAME/.ssh/id_rsa
+chown -R $USERNAME:$USERNAME /home/$USERNAME
