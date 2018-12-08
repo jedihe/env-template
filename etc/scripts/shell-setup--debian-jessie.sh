@@ -76,8 +76,8 @@ curl -LSso /home/$USERNAME/.gitconfig https://raw.githubusercontent.com/jedihe/m
 apt-get install -y python-pip
 easy_install pip
 
-# Install some tools needed by drush
-apt-get install -y unzip patch
+# Install some misc tools
+apt-get install -y unzip patch pv
 
 # Enable aliases for Coding Standards tooling.
 echo "source /mnt/etc/bashrc" >> /home/$USERNAME/.zshrc
