@@ -16,12 +16,15 @@ services:
       - DBHOST=mysql
       - HOST_UID=1000
     volumes:
-      - ../envshare/:/envshare/
-      - ./etc/:/mnt/etc/
-      - ./site/:/var/www/html/
-      - ~/.ssh/:/root/.ssh/
+      - ../envshare:/envshare
+      - ./etc:/mnt/etc
+      - ./site:/var/www/html
+      - ~/.ssh:/root/.ssh
     links:
       - mysql
+    networks:
+      - web
+      - backend
     labels:
       - 'traefik.backend=acme_1'
       - 'traefik.port=80'
@@ -39,6 +42,16 @@ services:
     volumes:
       - db:/var/lib/mysql
       - ./etc/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+    networks:
+      - backend
+    labels:
+      - 'traefik.enable=false'
 
 volumes:
   db:
+
+networks:
+  web:
+    external:
+      name: traefik_webgateway
+  backend:
