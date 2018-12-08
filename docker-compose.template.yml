@@ -29,7 +29,7 @@ services:
       - 'traefik.backend=acme_1'
       - 'traefik.port=80'
       - 'traefik.frontend.rule=Host:local.acme.co'
-      - 'traefik.docker.network=traefik_webgateway'
+      - 'traefik.docker.network=traefik'
 
   mysql:
     image: mysql:5.5
@@ -54,5 +54,5 @@ volumes:
 networks:
   web:
     external:
-      name: traefik_webgateway
+      name: traefik
   backend:
