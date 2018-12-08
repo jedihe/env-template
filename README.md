@@ -11,7 +11,7 @@ Start by setting up [Local Envs Web Gateway](https://github.com/jedihe/envs-web-
 Clone this repo (--recursive is required since there are git submodules to be cloned):
 
 ```
-git clone --recursive git@github.com:jedihe/env-template.git
+git clone --recursive https://github.com/jedihe/env-template.git env1
 ```
 
 Next, copy the template file into the actual docker-compose.yml:
