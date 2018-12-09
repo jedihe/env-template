@@ -1,6 +1,8 @@
 ## Local Env Template
 
-Simplistic local env for Drupal-based projects (D6-D7).
+Simplistic local env for Drupal-based projects (D6-D7), leveraging
+[Actency/docker-apache-php](https://github.com/Actency/docker-apache-php) for
+the heavy lifting.
 
 Depends on [Local Envs Web Gateway](https://github.com/jedihe/envs-web-gateway).
 
